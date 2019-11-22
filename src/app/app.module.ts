@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import {HomeComponent} from "./home/home.component";
 import {ProductDetailComponent} from "./product-detail/product-detail.component";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+import {_404Component} from "./_404Component/_404.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    _404Component
   ],
   imports: [
     BrowserModule,

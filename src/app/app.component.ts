@@ -8,7 +8,9 @@ import {Router} from "@angular/router";
             &nbsp;
             <a [routerLink]="['/product']" skipLocationChange>Product Details</a>
             &nbsp;
-            <button (click)="navigateToProductDetail()">Product Details</button>
+            <a [routerLink]="['/nonexistent-view-state']">404 Test</a>
+            &nbsp;
+            <button (click)="navigateToProductDetail()">Programmatic navigation</button>
             <router-outlet></router-outlet>
             `
 })
