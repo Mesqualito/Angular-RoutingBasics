@@ -8,9 +8,7 @@ import {_404Component} from "./_404Component/_404.component";
 const routes: Routes = [
   // passing only two of all possible properties from Angular's Route interface: path, component
   {path: '', component: HomeComponent},
-  // if the URL contains the fragment product followed by a value,
-  // renders ProductDetailComponent and passes the value to it:
-  {path: 'product/:id', component: ProductDetailComponent},
+  {path: 'products', component: ProductDetailComponent},
   // default (404 / error) wildcard route configuration must be the last element in the array of routes:
   {path: '**', component: _404Component}
 ];

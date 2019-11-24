@@ -3,13 +3,13 @@ import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'product',
-  template: '<h1 class="product">Product Detail for Product: {{productId}}</h1>',
+  template: '<h1 class="product">Showing Products in category \'{{productCategory}}\'</h1>',
   styles: ['.product { background: cyan }']
 })
 export class ProductDetailComponent {
-  productId: string;
+  productCategory: string;
 
   constructor(route: ActivatedRoute) {
-    route.paramMap.subscribe(params => this.productId = params.get('id'));
+    this.productCategory = route.snapshot.queryParamMap.get('category');
   }
 }
