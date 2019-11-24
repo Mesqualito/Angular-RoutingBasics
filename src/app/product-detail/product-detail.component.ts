@@ -9,9 +9,7 @@ import {ActivatedRoute} from "@angular/router";
 export class ProductDetailComponent {
   productId: string;
 
-  // the 'ActivatedRoute'-object is injected into the constructor of this component:
   constructor(route: ActivatedRoute) {
-    this.productId = route.snapshot.paramMap.get('id');
+    route.paramMap.subscribe(params => this.productId = params.get('id'));
   }
-
 }
